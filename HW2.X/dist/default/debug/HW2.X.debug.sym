@@ -1,4 +1,4 @@
-__S0 104E 0 ABS 0
+__S0 1050 0 ABS 0
 __S1 0 0 ABS 0
 __S3 0 0 ABS 0
 __Hudata_bank10 0 0 ABS 0
@@ -94,7 +94,7 @@ __Ludata_bank25 0 0 ABS 0
 __Hudata_bank28 0 0 ABS 0
 __Ludata_bank28 0 0 ABS 0
 %segments
-code 1004 104D CODE 1004 0
+code 1004 104F CODE 1004 0
 %locals
 build/default/debug/hw2_main.o
 C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\proc\\pic18f57q43.inc
@@ -131,10 +131,11 @@ hw2_main.s
 74 103E 0 CODE 0
 77 1040 0 CODE 0
 78 1042 0 CODE 0
-82 1044 0 CODE 0
+79 1044 0 CODE 0
 83 1046 0 CODE 0
 84 1048 0 CODE 0
 85 104A 0 CODE 0
+86 104C 0 CODE 0
 hw2_main.s
 hw2_main.s
 16 0 0 ABS 0

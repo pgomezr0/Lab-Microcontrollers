@@ -13,7 +13,7 @@
 %PSECTS
 $build/default/debug/hw2_main.o
 absdata - 0 1000 1000 4 1 1
-code CODE 0 1004 1004 4A 1 2
+code CODE 0 1004 1004 4C 1 2
 config CONFIG 4 300000 300000 A 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -30,11 +30,11 @@ BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 0-FFF 1
-CONST 104E-1FFFF 1
+CONST 1050-1FFFF 1
 IDLOC 200000-20003F 1
 SMALLCONST 2600-1FFFF 1
 CODE 0-FFF 1
-CODE 104E-1FFFF 1
+CODE 1050-1FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -63,7 +63,7 @@ BANK34 2200-22FF 1
 BANK35 2300-23FF 1
 BANK36 2400-24FF 1
 BIGRAM 500-FFF 1
-BIGRAM 104E-24FF 1
+BIGRAM 1050-24FF 1
 BIGSFR 0-4FF 1
 BIGSFR 2500-25FF 1
 COMRAM 500-55F 1
@@ -119,10 +119,11 @@ $build/default/debug/hw2_main.o
 103E code CODE >74:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
 1040 code CODE >77:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
 1042 code CODE >78:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
-1044 code CODE >82:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
+1044 code CODE >79:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
 1046 code CODE >83:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
 1048 code CODE >84:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
 104A code CODE >85:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
+104C code CODE >86:C:\Users\pgr01\Github\Lab-Microcontrollers\HW2.X\hw2_main.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -185,7 +186,7 @@ __Hdata 0 0 ABS 0 data -
 __Lcode 0 0 ABS 0 code -
 __Ldata 0 0 ABS 0 data -
 __Habsdata 1004 0 ABS 0 absdata -
-__S0 104E 0 ABS 0 - -
+__S0 1050 0 ABS 0 - -
 __S1 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Ludata_bank10 0 0 ABS 0 udata_bank10 -
@@ -254,7 +255,7 @@ __Ludata_acs 0 0 ABS 0 udata_acs -
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-code 0 1004 1004 4A 1
+code 0 1004 1004 4C 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

@@ -32615,22 +32615,23 @@ MAIN:
     ; and are counted from right to left (e.g., 10110111 ? 11100010). Load the result on WREG.
     MOVLW 0xB7
     MOVWF ((TST1) and 0FFh),0 ;Move literal to masked TST1 address
-    XORLW 0x45
+    XORLW 0x45 ;XOR with 01000101
 
 ; 8) Load literal 0x54 to a variable called TST2 and set to 1 only odd bits. Bit order goes from 0 to 7
     ; and are counted from right to left (e.g., 01010100 ? 11111110). Load the result on WREG.
     MOVLW 0x54
     MOVWF ((TST2) and 0FFh),0 ;Move literal to masked TST2 address
-    XORLW 0xAA ;10101010
+    XORLW 0xAA ;XOR with 10101010
 
 ; 9) Assign literal 0x23 on WREG and switch nibbles. Load the result on WREG.
-    MOVLW 0x23
-    SWAPF WREG,0,0
+    MOVLW 0x7F
+    MOVWF ((VAR) and 0FFh),0
+    CLRF ((VAR) and 0FFh),0
 
 ; 10) Load value from ((INT0PPS) and 0FFh), 3, b B to WREG. If PB4 = 1 (on-board switch), toggle ((PORTF) and 0FFh), 3, a (on-board LED).
 LOOP:
-    MOVF PORTB,0,0
-    BTFSS WREG,4,0
-    BTG LATF,3,0
+    MOVF PORTB,0,0 ;Move ((INT0PPS) and 0FFh), 3, b B to WREG
+    BTFSS WREG,4,0 ;PB4=1
+    BTG LATF,3,0 ;Toggle ((PORTF) and 0FFh), 3, a
     GOTO LOOP
 END resetVec
